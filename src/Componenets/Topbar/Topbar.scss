@@ -1,0 +1,160 @@
+@import "../../global.scss";
+
+
+.Topbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3 ;
+    transition: all 1s ease;
+    overflow: hidden;
+
+  /*  .Wrapper{
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }*/
+    .left{
+
+
+
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+          }
+          body{
+            font-family: 'Kanit', sans-serif;
+          }
+          nav{
+            background: #464444;
+            height: 80px;
+            width: 100%;
+          }
+          .logo{
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0 30px;
+            font-weight: bold;
+            float: left;
+          }
+          nav ul{
+            float: left;
+            margin-right: 20px;
+          }
+          nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+          }
+          nav ul li a{
+            color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+          }
+          a.active,a:hover{
+            &:hover{
+              font-weight: 0;
+          }
+          }
+          .checkbtn{
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+          }
+          #check{
+            display: none;
+          }
+          @media (max-width: 750px){
+            label.logo{
+              font-size: 30px;
+              padding-left: 50px;
+            }
+            nav ul li a{
+              font-size: 16px;
+            }
+          }
+          .links{ 
+            margin-right: 40px;
+            float: right;
+            padding-top: 30px;
+              .linkedin{
+                    color: white;
+                    height: 20px;
+                    width: 20px; 
+                    margin-right: 10px;   
+                }
+                .Github{
+                    color: white;
+                    height: 20px;
+                    width: 20px;    
+                }
+  
+        }
+
+          @media (max-width: 750px){
+            .checkbtn{
+              display: block;
+            }
+            ul{
+              position: fixed;
+              width: 100%;
+              height: 100vh;
+              background: #464444;
+              top: 80px;
+              left: -100%;
+              text-align: center;
+              transition: all .5s;
+            }
+            nav ul li{
+              display: block;
+              margin: 50px 0;
+              line-height: 30px;
+            }
+            nav ul li a{
+              font-size: 20px;
+            }
+            a:hover,a.active{
+              &:hover{
+                font-weight: 800;
+            }
+            }
+           
+            #check:checked ~ ul{
+              left: 0;
+            }
+           
+
+          }
+         
+       
+ 
+            
+        
+
+    .right{
+        display: flex;
+        align-items: center;
+
+        .itemcontainer{
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+
+        }
+
+      }}}
+      
+       
+
+     

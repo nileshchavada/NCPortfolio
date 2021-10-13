@@ -1,0 +1,85 @@
+.Portfolio{
+    background-color: white;
+   
+
+    .left{
+        flex: 0.5;
+       
+
+        .details{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+         }
+        .bar{
+            width: 50%;
+            position: relative;
+            border : 2px solid #ef3724;
+            border-radius: 20px;
+        }
+       .bar div{
+            position: relative;
+            width: 0%;
+            height: 9px;
+            border-radius: 10px;
+            background-color: #ef3724;
+
+        }
+        .skills:not(:last-child){
+            margin-bottom: 15px;
+        }
+
+        #html-bar{
+             animation: html-fill 3s forwards;
+        }
+        @keyframes html-fill{
+            0%{}
+           100%{
+               width: 65%;
+           }
+        }
+
+        #js-bar{
+            animation: js-fill 3s forwards;  
+        }
+        @keyframes js-fill{
+            0%{}
+            100%{
+                width: 75%;
+            }
+        }
+
+        #python-bar{
+            animation: python-fill 3s forwards;  
+        }
+        @keyframes python-fill{
+            0%{ }
+            100%{
+                width: 70%;
+            }
+        }
+
+        #sql-bar{
+            animation: sql-fill 3s forwards;  
+        }
+        @keyframes sql-fill{
+            0%{}
+            100%{
+                width: 60%;
+            }
+        }
+
+   @media only screen and (max-width:750px){
+       .left{
+           padding: 0 5%;
+            }  
+             }
+        }
+
+    .right{
+        flex:0.5;
+        
+    }
+
+}

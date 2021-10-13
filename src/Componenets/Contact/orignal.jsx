@@ -1,0 +1,87 @@
+import React, { useState } from 'react'
+import "./Contact.scss"
+import emailjs from 'emailjs-com';
+import ReCAPTCHA from 'react-google-recaptcha'
+import validation from './validation';
+
+
+export default function Contact() {
+    const state = { 
+    email: '',
+    name: '',
+    subject: '',
+    message: '',
+}
+
+
+
+    const [values, setValues] = useState({state});
+ 
+    const handelchange = (e) =>{
+        setValues({
+            ...values,
+            [e.target.name]: e.target.value,            
+        });
+     };
+
+    const [errors, setErrors] = useState({});
+    const [message, setmessage] = useState(false)
+     
+ 
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+         setmessage(true)
+        emailjs.sendForm('service_vsxji59', 'NCcontact', e.target, 'user_tmGqoNrJy7HoDu1DKYWau')
+            .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+         console.log(error.text);
+      });
+
+      setErrors(validation(values));
+      e.target.state("")
+     }
+    
+      
+
+    function onChange(value) {
+        console.log("Captcha value:", value);
+      }
+
+    return (
+     <div className="Contact" id="Contact">
+             
+            <div className="left">
+                
+                <form onSubmit={handleSubmit} >
+                    <input type="email" placeholder="E-mail" name="email" value={values.email} onChange={handelchange}/>
+                    {errors.email && <p className="error"> {errors.email} </p>}
+                     <input type="text" placeholder="Name" name="name" value={values.name} onChange={handelchange}/>
+                     {errors.name && <p className="error"> {errors.name} </p>}
+                     <input type="text" placeholder="Subject" name="subject"
+                      value={values.subject}onChange={handelchange} />
+                     <textarea type="text"  placeholder="Write your message"
+                     cols="30" rows="7" name="message" value={values.message} onChange={handelchange}></textarea>
+                     {errors.message && <p className="error"> {errors.message} </p>}
+ 
+                    <ReCAPTCHA className="captcha"
+                            sitekey="6LcPAXAcAAAAAPDcIBT8o_bFZw2Q4veJ3dYum-8k"
+                            onChange={onChange} />
+
+                    <button  type="submit">Send</button>
+                    {message  &&  <span>Thanks, I will reply ASAP :)</span>}
+                </form>
+            </div>
+            <div className="right">
+            <h3>Let's talk about everything!</h3>
+            <p>If you have any question please contact me by E-mail
+                 or You can write your message left side I will reply as soon as possible.</p>
+                    <div className="imagecontainer">
+                     <img src="image/contact.svg" alt="" />
+                 </div>
+                
+            </div>
+            
+        </div>
+    )
+}

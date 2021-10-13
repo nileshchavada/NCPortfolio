@@ -1,0 +1,549 @@
+@import "../../global.scss";
+
+.Portfolio{
+    background-color: $mainColor;
+    height: 100%;
+    padding-top: 50px;
+     @include mobile{
+      margin-top: -200px;
+
+     }
+
+  .skilleducation{
+
+    display: flex; 
+    @include mobile{
+      flex-direction: column;
+     }
+
+    .left{
+      flex: 0.5;
+      padding-left: 80px;
+      @include mobile{
+        padding-left: 0px;
+        padding-right: 30px;
+
+       }
+     
+
+      .wrapper{
+          margin-left: 50px;
+
+          h1{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-family: 'Kanit', sans-serif;
+            font-size: 25px;
+            padding-bottom: 10px;
+            @include mobile{
+              font-size: 18px;
+              padding-bottom: 10px;
+      
+             }
+
+          }
+
+      .details{
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5px;
+          font-family: 'Kanit', sans-serif;
+          @include mobile{
+              font-size: 14px;    
+           }
+       }
+      .bar{
+          width: 90%;
+          position: relative;
+          border : 2px solid $secondColor;
+          border-radius: 20px;
+          @include mobile{
+            border-radius: 15px;
+    
+           }
+          
+          
+      }
+     .bar div{
+          position: relative;
+          width: 0%;
+          height: 9px;
+          border-radius: 10px;
+          background-color:  $secondColor;
+          @include mobile{
+            height: 6px;
+            border-radius: 6px;
+           }
+          
+
+      }
+      .skills:not(:last-child){
+          margin-bottom: 20px;
+      }
+
+      #html-bar{
+           animation: html-fill 3s forwards;
+      }
+      @keyframes html-fill{
+          0%{}
+         100%{
+             width: 65%;
+         }
+      }
+
+      #js-bar{
+          animation: js-fill 3s forwards;  
+      }
+      @keyframes js-fill{
+          0%{}
+          100%{
+              width: 75%;
+          }
+      }
+
+      #python-bar{
+          animation: python-fill 3s forwards;  
+      }
+      @keyframes python-fill{
+          0%{ }
+          100%{
+              width: 70%;
+          }
+      }
+
+      #sql-bar{
+          animation: sql-fill 3s forwards;  
+      }
+      @keyframes sql-fill{
+          0%{}
+          100%{
+              width: 60%;
+          }
+      }
+      #react-bar{
+          animation: react-fill 3s forwards;  
+      }
+      @keyframes react-fill{
+          0%{}
+          100%{
+              width: 70%;
+          }
+      }
+
+      #AWS-bar{
+        animation: AWS-fill 3s forwards;  
+    }
+    @keyframes AWS-fill{
+        0%{}
+        100%{
+            width: 35%;
+        }
+    }
+
+    #DevOps-bar{
+      animation: DevOps-fill 3s forwards;  
+  }
+  @keyframes DevOps-fill{
+      0%{}
+      100%{
+          width: 35%;
+      }
+  }
+
+  }
+}
+
+  .right{
+      flex:0.5;
+      @include mobile{
+        padding-left: 40px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+
+
+   h2{
+
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          font-family: 'Kanit', sans-serif;
+          font-size: 25px;
+          padding-bottom: 10px;
+
+          @include mobile{
+                       font-size: 18px;
+                       padding-bottom: 10px;
+
+          }
+
+
+      }
+
+      .timeline {
+          position: relative;
+          display: block;
+          list-style: none;
+          padding-left: 0;
+          width: 80%;
+          height: 80%;
+        }
+        
+         
+        
+        .timeline::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 10px;
+          left: 11px;
+          margin: auto;
+          width: 2px;
+          height: 95%;
+          background-color: #464444;
+          
+        }
+        @media only screen and (min-width: 750px) {
+          #timeline {
+            margin-top: 03em;
+            margin-bottom: 3em;
+            height: 10%;
+          }
+          #timeline::before {
+            left: 50%;
+            margin-left: -2px;
+            height: 10%;
+          }
+        }
+        
+        .timeline li {
+          position: relative;
+          display: block;
+          padding-left: 30px;
+          margin-bottom: 13px;
+         
+        }
+        
+        .timeline li::before {
+          content: '';
+          position: absolute;
+          top: 8px;
+          left: -0px;
+          width: 18px;
+          height: 18px;
+          background-color: #464444;
+          border: 3px solid #f3f3f3;
+          border-radius: 50%;
+        }
+
+       
+        .timeline li .title {
+          width: 180px;
+          padding: 8px 10px;
+          background-color: #464444;
+          color: #f3f3f3;
+          font-weight: 500;
+          font-family: 'Kanit', sans-serif;
+          border-radius: 30px 0 60px 30px;
+          @include mobile{
+            font-weight: 300;
+            font-size: 14px;
+    
+           }
+        }
+        
+        .timeline li .details {
+          background-color: #f3f3f3;
+          margin-top: 5px;
+          padding: 5px;
+          font-size: 14px;
+          font-family: 'Kanit', sans-serif;
+          border-radius: 4px;
+          p{
+            font-size: 12px;
+          }
+          @include mobile{
+              font-size: 12px;
+           }
+        }
+        
+
+        
+        .timeline li .details small {
+          display: block;
+          font-weight: 400;
+          font-size: 10px;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          font-family: 'Kanit', sans-serif;
+        }  
+        
+        @media only screen and (min-width: 750px) {
+          .timeline  h2 {
+            font-size: 20px;
+            font-size: 1.25rem;
+          }
+          .timeline  p {
+            font-size: 14px;
+            font-size: 1rem;
+          }
+         
+        }
+        @media only screen and (min-width: 750px) {
+          .timeline .li {
+            color: white;
+            margin-left: 0;
+            padding: 1.6em;
+            width: 36%;
+            margin: 0 5%
+          }
+          .timeline .li ::before {
+            top: 24px;
+            left: 100%;
+            border-color: transparent;
+            border-left-color: #333C42;
+          }
+          
+          .timeline-li {
+            float: right;
+          }
+          .timeline .li::before {
+            top: 24px;
+            left: auto;
+            right: 100%;
+            border-color: transparent;
+            border-right-color: #d6e5f0;
+          }
+          .timeline .li  {
+            float: right;
+          }
+        
+        }
+        
+       
+        @media only screen and (max-width:750px ){
+          .right{
+              padding: 0 5%;
+               }  
+                }
+
+  }
+
+  }
+
+
+  
+    .project{
+      width: 100%;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-family: 'Kanit', sans-serif;
+      font-size: 15px;
+      @include mobile{
+        display: none;
+       }
+     }
+    
+html, body {
+    background-color: white;
+    height: 100%;
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+
+.cd-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  background: white;
+  padding: 0 10%;
+  border-radius: 2px;
+  @include mobile{
+   display: none;
+  }
+  
+}
+.cd-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#cd-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  height: 100%;
+  width: 4px;
+  background: black;
+}
+@media only screen and (min-width: 750px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 750px) {
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cd-timeline-img {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #726f75, inset 0 2px 0 rgba(145, 41, 41, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.cd-timeline-img {
+  background: #464444;
+}
+@media only screen and (min-width: 750px) {
+  .cd-timeline-img {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 15px;
+     
+  }
+}
+
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  margin-right: 30px;
+  background: #f3f3f3;
+  border-radius: 2px;
+  padding: 1em;
+  
+}
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-content h2 {
+  flex: 0.5;
+  color: rgba(26, 8, 8, 0.7);
+  margin-top:0;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: right;
+  font-family: 'Kanit', sans-serif;
+}
+.cd-timeline-content p, .cd-timeline-content .cd-date {
+  color: rgba(26, 8, 8, 0.7);
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+}
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+  font-family: 'Kanit', sans-serif;
+}
+
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #bac3c9;
+}
+
+@media only screen and (min-width: 750px) {
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+ 
+}
+@media only screen and (min-width: 750px) {
+  .cd-timeline-content {
+    color: white;
+    margin-left: 0;
+    padding: 1.6em;
+    width: 36%;
+    margin: 0 5%
+  }
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #333C42;
+  }
+  
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #d6e5f0;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+
+}
+
+   
+
+
