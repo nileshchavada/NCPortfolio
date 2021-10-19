@@ -8,7 +8,7 @@ export default function Aboutme() {
                 
             <div className="left">
               <div className="imagecontainer">
-                     <img src="image/God.jpg" alt="" />
+                     <img src={process.env.PUBLIC_URL + '/image/God.jpg'} alt="" />
                  </div>
             </div>
             <div className="right">

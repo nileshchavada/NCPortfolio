@@ -66,7 +66,7 @@ export default function Contact() {
             <p>If you have any question please contact me by E-mail
                  or You can write your message left side I will reply as soon as possible.</p>
                     <div className="imagecontainer">
-                     <img src="image/contact.svg" alt="" />
+                     <img src={process.env.PUBLIC_URL + '/image/contact.svg'}alt="" />
                  </div>
                 
             </div>
