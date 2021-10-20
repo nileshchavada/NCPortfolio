@@ -1,6 +1,6 @@
 {
-  "homepage": "https://nileshchavada.github.io/NCportfolio",
   "name": "portfolio",
+  "homepage": "https://nileshchavada.me",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
