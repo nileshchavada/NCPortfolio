@@ -21,8 +21,9 @@ function App() {
       <div className="App">
       <Topbar/> 
       <div className="section">
+      
         <Switch>
-          <Route exact path="/Intro"> <Intro/></Route>
+          <Route exact path="/"> <Intro/> </Route>
           <Route path="/Aboutme"><Aboutme/></Route>
           <Route path="/Portfolio"><Portfolio/></Route>
           <Route path="/Contact"><Contact/></Route>

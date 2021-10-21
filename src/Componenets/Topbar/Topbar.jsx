@@ -15,9 +15,9 @@ export default function Topbar({ menuOpen, setmenuOpen }) {
       <label htmlFor="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <Link to="/" className="logo">NC</Link>
+      <a href="/" className="logo">NC</a>
       <ul>
-        <li><Link to="/Intro">Home</Link></li>
+        <li><a href="/">Home</a></li>
         <li><Link to="/Aboutme">About Me</Link></li>
         <li><Link to="/Portfolio">Portfolio</Link></li>
         <li><Link to="/Contact">Contact</Link></li>
