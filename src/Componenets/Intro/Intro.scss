@@ -3,8 +3,8 @@
 .Intro {
   background-color: white;
   display: flex;
-  margin-right: -10%;
- 
+  z-index: 1;
+
   @include mobile{
     background-color: white;
     flex-direction: column;

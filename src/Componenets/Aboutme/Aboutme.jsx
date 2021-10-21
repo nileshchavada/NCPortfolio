@@ -16,10 +16,10 @@ export default function Aboutme() {
                 <p>I'm Nilesh, I worked on diffrent technology like, Frontend, Backend and Cloud  during my studies. I am enthusiast for computer Science.
                     <br />
                     <br />
-                    I am a Master's student at SRH Hochschule Heidelberg studying Applied
-                    Computer Science specializing in Bussiness Computing. I have kept my 
+                    I am doing Master's in Applied
+                    Computer Science at SRH Hochschule Heidelberg. I have kept my 
                     analytic mind active with technical expertise but at the same time,
-                    was always fascinated by the scintillating world of art.
+                    is always fascinated by the scintillating world of art.
                     </p>
                     <div className="detail">
                     <div className="itemcontainer">

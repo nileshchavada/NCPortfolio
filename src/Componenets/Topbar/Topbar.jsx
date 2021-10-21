@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Topbar.scss"
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -14,12 +15,12 @@ export default function Topbar({ menuOpen, setmenuOpen }) {
       <label htmlFor="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <a href="#Intro" className="logo">NC</a>
+      <Link to="/" className="logo">NC</Link>
       <ul>
-        <li><a class="active" href="#Intro">Home</a></li>
-        <li><a href="#Aboutme">About Me</a></li>
-        <li><a href="#Portfolio">Portfolio</a></li>
-        <li><a href="#Contact">Contact</a></li>
+        <li><Link to="/Intro">Home</Link></li>
+        <li><Link to="/Aboutme">About Me</Link></li>
+        <li><Link to="/Portfolio">Portfolio</Link></li>
+        <li><Link to="/Contact">Contact</Link></li>
       </ul>
       <div className="links">
                             <a href="https://www.linkedin.com/in/chavadanilesh/" target="_blank" rel="noreferrer noopener">

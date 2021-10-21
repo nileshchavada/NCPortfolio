@@ -4,8 +4,12 @@
     background-color: $mainColor;
     height: 100%;
     padding-top: 50px;
+    z-index: 3;
+    
      @include mobile{
-      margin-top: -200px;
+       
+       float: left;
+       
 
      }
 

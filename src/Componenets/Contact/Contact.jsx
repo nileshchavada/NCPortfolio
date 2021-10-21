@@ -24,11 +24,13 @@ export default function Contact() {
      };
 
     const [errors, setErrors] = useState({});
-      
+    const [message, setmessage] = useState(false)
+     
  
-    const handleSubmit = (e ) =>{
+    const handleSubmit = (e) =>{
         e.preventDefault();
-         emailjs.sendForm('service_vsxji59', 'NCcontact', e.target, 'user_tmGqoNrJy7HoDu1DKYWau')
+         setmessage(true)
+        emailjs.sendForm('service_vsxji59', 'NCcontact', e.target, 'user_tmGqoNrJy7HoDu1DKYWau')
             .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -36,12 +38,13 @@ export default function Contact() {
       });
 
       setErrors(validation(values));
-      setValues("")
+      e.target.state("")
      }
     
       
 
     
+
     return (
      <div className="Contact" id="Contact">
              <h1>Contact</h1>
@@ -57,8 +60,11 @@ export default function Contact() {
                      <textarea type="text"  placeholder="Write your message"
                      cols="30" rows="7" name="message" value={values.message} onChange={handelchange}></textarea>
                      {errors.message && <p className="error"> {errors.message} </p>}
-                    <button  type="submit"  >Send</button>
+ 
                     
+
+                    <button  type="submit">Send</button>
+                    {message  &&  <span>Thanks, I will reply ASAP :)</span>}
                 </form>
             </div>
             <div className="right">
@@ -66,7 +72,7 @@ export default function Contact() {
             <p>If you have any question please contact me by E-mail
                  or You can write your message left side I will reply as soon as possible.</p>
                     <div className="imagecontainer">
-                     <img src={process.env.PUBLIC_URL + '/image/contact.svg'}alt="" />
+                     <img src="image/contact.svg" alt="" />
                  </div>
                 
             </div>

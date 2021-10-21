@@ -10,15 +10,15 @@
         background-color: white;
         flex-direction: column;
         align-items: center;
-        overflow: auto;
-       } 
+        justify-content: center; 
+      } 
 
      h1{
          display: none;
 
          @include mobile{
             display: inline;
-            padding-top: 255px;
+            padding-top: 25px;
             margin-bottom: 8px;
 
      }  
